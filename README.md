@@ -1,5 +1,5 @@
 # Chess-System-Tal-NNUE-2
-UCI Chess engine written in C++ by Chris Whittington and Ed Schroeder
+UCI Chess engine written in C++ by Chris Whittington and Ed Schröder
 
 CSTal is a UCI engine and needs a User Interface (UI) such as CuteChess, Banksia or Arena to run.
 
