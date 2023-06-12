@@ -1,10 +1,40 @@
-Chess-System-Tal-NNUE-2
-UCI Chess engine written in C++ by Chris Whittington and Ed Schröder
+# Chess-System-Tal-NNUE-2
 
-CSTal is a UCI engine and needs a User Interface (UI) such as CuteChess, Banksia or Arena to run.
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-CSTal is the big brother of Rebel 16, and is about 50 Elo pts stronger, putting it in at least the top five of freely available chess engines.
+![Chess-System-Tal-NNUE-2](chess_system_tal_nnue_2.png)
 
-Opening Book: Assuming you have a folder containing these two polyglot book files: polyglot-books/book.bin and polyglot-books/rebel.bin Turn book On: UCI command "setoption name Bookfile value book.bin" or "setoption name Bookfile value rebel.bin" Set Book Depth: "setoption name Bookdepth value N" where N is 0-200 Set Random factor "setoption name Bookrandom value N" where N is 0-100
+Chess-System-Tal-NNUE-2 is a UCI chess engine written in C++ by Chris Whittington and Ed Schröder.
 
-Learn Assist: Using an internal learnt database, the engine search is weighted to prefer certain lines Turn Learn Assist Off: "setoption name Favouredmovedepth value 0" Turn Favoured Move On: "setoption name Favouredmovedepth value N" where N is 1-100 Set Random factor "setoption name Favouredmoverandomiser value N" where N is 0-100
+## Features
+
+- UCI-compatible chess engine
+- Approximately 50 Elo points stronger than Rebel 16
+- Top five ranking among freely available chess engines
+
+## Requirements
+
+- User Interface (UI) software such as CuteChess, Banksia, or Arena
+
+## Usage
+
+1. Download and install a User Interface (UI) software compatible with UCI chess engines.
+2. Load Chess-System-Tal-NNUE-2 as a chess engine in the chosen UI software.
+3. Configure the opening book:
+   - Ensure you have a folder containing the following polyglot book files: `polyglot-books/book.bin` and `polyglot-books/rebel.bin`.
+   - To enable the book, use the UCI command: `setoption name Bookfile value book.bin` or `setoption name Bookfile value rebel.bin`.
+   - Set the book depth using the command: `setoption name Bookdepth value N`, where N is a value between 0 and 200.
+   - Adjust the random factor with: `setoption name Bookrandom value N`, where N is a value between 0 and 100.
+4. Configure Learn Assist:
+   - By utilizing an internal learned database, the engine search is weighted to prefer certain lines.
+   - To turn off Learn Assist, use the command: `setoption name Favouredmovedepth value 0`.
+   - To enable Favoured Move, use: `setoption name Favouredmovedepth value N`, where N is a value between 1 and 100.
+   - Adjust the random factor with: `setoption name Favouredmoverandomiser value N`, where N is a value between 0 and 100.
+
+## Contributing
+
+Contributions to Chess-System-Tal-NNUE-2 are welcome! If you would like to contribute, please follow the guidelines in [CONTRIBUTING.md](CONTRIBUTING.md). 
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
