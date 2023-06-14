@@ -1,15 +1,11 @@
 # Chess-System-Tal-NNUE-2
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
-![Chess-System-Tal-NNUE-2](chess_system_tal_nnue_2.png)
-
 Chess-System-Tal-NNUE-2 is a UCI chess engine written in C++ by Chris Whittington and Ed Schröder.
 
 ## Features
 
 - UCI-compatible chess engine
-- Approximately 50 Elo points stronger than Rebel 16
+- Approximately 50 Elo points stronger than our prior release Rebel 16
 - Top five ranking among freely available chess engines
 
 ## Requirements
@@ -33,8 +29,5 @@ Chess-System-Tal-NNUE-2 is a UCI chess engine written in C++ by Chris Whittingto
 
 ## Contributing
 
-Contributions to Chess-System-Tal-NNUE-2 are welcome! If you would like to contribute, please follow the guidelines in [CONTRIBUTING.md](CONTRIBUTING.md). 
+Contributions to Chess-System-Tal-NNUE-2 are welcome! If you would like to contribute, please contact us at https://prodeo.actieforum.com/
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
