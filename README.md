@@ -9,8 +9,8 @@ Chess-System-Tal-NNUE-2 is a UCI chess engine written in C++ by Chris Whittingto
 - Public executable, private source code
 - Elo 2914 Blitz rating on Nightmare.nl server
 - June Blitz 2023 authors tourney, 1st=
-- Previous tourney 2nd=
-- Previous tourney 1st Outright
+- Previous Blitz tourney 2nd=
+- Previous Blits tourney outrigh 1st
 - Top five ranking among freely available chess engines
 
 ## Requirements
