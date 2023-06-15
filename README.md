@@ -38,7 +38,8 @@ Chess-System-Tal-NNUE-2 is a UCI chess engine written in C++ by Chris Whittingto
 7. For Power Users
    - Windows and some UI's can become unstable if cores are set too high, use at your own risk
    - setoption name RelaxThreadLimit value N (set yourself as a power user)
-   - 
+   - setoption name LoadNNUE value (save and load NNUE files)
+   - setoption name SaveNNUE value 
 
 ## Contributing
 
