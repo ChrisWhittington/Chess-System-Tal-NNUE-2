@@ -10,8 +10,8 @@ Chess-System-Tal-NNUE-2 is a UCI chess engine written in C++ by Chris Whittingto
 - Elo 2914 Blitz rating on Nightmare.nl server
 - June Blitz 2023 authors tourney, 1st=
 - Previous Blitz tourney 2nd=
-- Previous Blits tourney outrigh 1st
-- Top five ranking among freely available chess engines
+- Previous Blitz tourney outright 1st
+- Top five ranking (probably) among freely available chess engines
 
 ## Requirements
 - AVX2 compatible PC
@@ -23,7 +23,7 @@ Chess-System-Tal-NNUE-2 is a UCI chess engine written in C++ by Chris Whittingto
 2. Load Chess-System-Tal-NNUE-2 as a chess engine in the chosen UI software.
 3. Hash, Threads, Ponder
    - setoption name Hash value N to set Hash table size
-   - setoption name Threads value N to set threads (limited to max(1, cores/2), some UI programs and Windows can't cope with high core count)
+   - setoption name Threads value N to set Threads (limited to max(1, cores/2), some UI programs and Windows can't cope with high core count)
    - setoption name Ponder value N to turn Pondering on or off
 5. Configure the opening book:
    - Ensure you have a folder containing the following polyglot book files: `polyglot-books/book.bin` and `polyglot-books/rebel.bin`.
@@ -45,26 +45,26 @@ Chess-System-Tal-NNUE-2 is a UCI chess engine written in C++ by Chris Whittingto
 
 Contributions to Chess-System-Tal-NNUE-2 are welcome! If you would like to contribute, please contact us at https://prodeo.actieforum.com/
 
-## Reviews of the Old Chess System Tal, published by Chris HWittington at the end of the last century
-The Chess System programs were created by Chris Whittington in the 1990's and marketed by his company, Oxford Softworks. Their creation was guided by Whittington's philosophy that encoding knowledge into a chess program is much preferable over fast and deep searches.
-CSTal is designed to play in the romantic and dangerous style of Michael Tal, famous for his daring and aggressive style of play.
+## Reviews of the Old Chess System Tal, published by Chris Whittington, from the end of the last century
+"The Chess System Tal programs were created by Chris Whittington in the 1990's and marketed by his company, Oxford Softworks. Their creation was guided by Whittington's philosophy that encoding knowledge into a chess program is much preferable over fast and deep searches.
+CSTal is designed to play in the romantic and dangerous style of Michael Tal, famous for his daring and aggressive style of play."
 
-Programmer Chris Whittington has developed a radically different approach to chess programming, concentrating on speculative chess knowledge within the evaluation function; and the use of forward pruning techniques which rely on this evaluation function knowledge.
+"Programmer Chris Whittington has developed a radically different approach to chess programming, concentrating on speculative chess knowledge within the evaluation function; and the use of forward pruning techniques which rely on this evaluation function knowledge."
 
-One effect of using a high knowledge-based approach is that CSTal operates at a nodes per second rate much less than programs with simple evaluation functions. The risks and benefits of this strategy are obvious; on the one side CSTal is able to steer games towards tactical king-attack complexities, and to execute stunning sacrifices. On the other side the disparity in effective search depth means that state of the art search programs will have the advantage if the position does not contain factors where CSTal's knowledge is able to give it the edge.
+"One effect of using a high knowledge-based approach is that CSTal operates at a nodes per second rate much less than programs with simple evaluation functions. The risks and benefits of this strategy are obvious; on the one side CSTal is able to steer games towards tactical king-attack complexities, and to execute stunning sacrifices. On the other side the disparity in effective search depth means that state of the art search programs will have the advantage if the position does not contain factors where CSTal's knowledge is able to give it the edge."
 
-CSTal's computer-computer games are often very exciting and double-edged, with the result in doubt until the end. It is capable of causing serious upsets to top programs, but also of being seriously upset itself.
+"CSTal's computer-computer games are often very exciting and double-edged, with the result in doubt until the end. It is capable of causing serious upsets to top programs, but also of being seriously upset itself."
 
-In a materialistic world, in the materialistic world of computer chess, Chess System Tal offers the alternative pathway of idealism.
+2In a materialistic world, in the materialistic world of computer chess, Chess System Tal offers the alternative pathway of idealism.
 Chris Whittington's philosophy of knowledge over search can be best described by his own words:
 
 It's the search gap. Gettit ? Out of this search gap comes all the naive speculation and nonsense that gets written. The program has every style and no style, it has no consistency to play against, only materialism, you can't learn from it, tomorrow it will be different (found another mine in the search gap), only the difference is just a relection of - whoops, trod on another mine. What can you do with such a program ? Use the take-back key and try again ? - and imagine this helps you improve or learn ?
 
 Now, I claim this search gap has no meaning or understanding possibilities for a human. That a human can't relate his heuristics to it. That you can't extract the knowledge out of it and represent it to a human. That you can't even extract the knowledge out of it and represent it to yourself. You can't get heuristics from it. So I call it counting beans - useless for us humans.
 
-Now, take a knowledge program, you can play it and see the play style. You can try and work out what it does and why. There'll be a reason, based on human chess heuristics. The game has plan, and flow, and doesn't consist of hidden minefields. It won't grind you down by search, it will try speculative ideas which it might, or might not, be able to get to work. You can see the speculative ideas, and try them yourself. I think you can, as a human, relate to this type of program. If you know the programmer, maybe you can see patterns into the program that come from him, and so on. I think these types of programs are infused with some force, in so far as any chunk of silicon can be.
+Now, take a knowledge program, you can play it and see the play style. You can try and work out what it does and why. There'll be a reason, based on human chess heuristics. The game has plan, and flow, and doesn't consist of hidden minefields. It won't grind you down by search, it will try speculative ideas which it might, or might not, be able to get to work. You can see the speculative ideas, and try them yourself. I think you can, as a human, relate to this type of program. If you know the programmer, maybe you can see patterns into the program that come from him, and so on. I think these types of programs are infused with some force, in so far as any chunk of silicon can be."
 
-Chess System Tal contained some of the essence of this philosophy. By all accounts its sequel, Chess System Tal 2 (written for Windows), was this philosophy captured in code. By all accounts, CSTal 2 was a masterpiece as a chess program for humans to play against. Aggressive, speculative, unsound. But, above all, the chess it played was exciting and interesting.
+"Chess System Tal contained some of the essence of this philosophy. By all accounts its sequel, Chess System Tal 2 (written for Windows), was this philosophy captured in code. By all accounts, CSTal 2 was a masterpiece as a chess program for humans to play against. Aggressive, speculative, unsound. But, above all, the chess it played was exciting and interesting."
 "Just curious. We saw human player make unsound sac[rifice] all the time, at least in club level. That often leads to a more exciting and interesting game or more humanly game. We, human, saw the opportunity, but don't know the outcome within our calculating power, we gamble! Sometime we win sometime lose.
 "Chess softwares, which been lowed their strenth to club level, seem not doing so. They reduce their playing strenth by hanging pieces or reduce searching time. This make playing against them rather dull.
 "May be this is a desired feature of some top comercial software."
