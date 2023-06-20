@@ -16,6 +16,7 @@ Chess-System-Tal-NNUE-2 is a UCI chess engine written in C++ by Chris Whittingto
 ## Requirements
 - AVX2 compatible PC
 - User Interface (UI) software such as CuteChess, Banksia, or Arena
+- NB Arena has a bug which causes it to misidentify our engine. You need to tell Arena UI that CSTal is a UCI engine.
 
 ## Usage
 
