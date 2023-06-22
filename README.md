@@ -11,7 +11,7 @@ Chess-System-Tal-NNUE-2 is a UCI chess engine written in C++ by Chris Whittingto
 - June Blitz 2023 authors tourney, 1st=
 - Previous Blitz tourney 2nd=
 - Previous Blitz tourney outright 1st
-- Top five ranking (probably) among freely available chess engines
+- Top five ranking (probably) among currently publicly available chess engines
 
 ## Requirements
 - AVX2 compatible PC
@@ -26,21 +26,31 @@ Chess-System-Tal-NNUE-2 is a UCI chess engine written in C++ by Chris Whittingto
    - setoption name Hash value N to set Hash table size
    - setoption name Threads value N to set Threads (limited to max(1, cores/2), some UI programs and Windows can't cope with high core count)
    - setoption name Ponder value N to turn Pondering on or off
-5. Configure the opening book:
+4. Use of concurrency when testing and/or multiple threads
+   - we do NOT recommend using concurrency values greater than available cores.
+   - if your core count is 32 or more, concurrency should not be more than 25 (80% of core count)
+6. Configure the opening book:
    - Ensure you have a folder containing the following polyglot book files: `polyglot-books/book.bin` and `polyglot-books/rebel.bin`.
    - To enable the book, use the UCI command: `setoption name Bookfile value book.bin` or `setoption name Bookfile value rebel.bin`.
    - Set the book depth using the command: `setoption name Bookdepth value N`, where N is a value between 0 and 200.
    - Adjust the random factor with: `setoption name Bookrandom value N`, where N is a value between 0 and 100.
-6. Configure Learn Assist:
+7. Configure Learn Assist:
    - By utilizing an internal learned database, the engine search is weighted to prefer certain lines.
    - To turn off Learn Assist, use the command: `setoption name Favouredmovedepth value 0`.
    - To enable Favoured Move, use: `setoption name Favouredmovedepth value N`, where N is a value between 1 and 100.
    - Adjust the random factor with: `setoption name Favouredmoverandomiser value N`, where N is a value between 0 and 100.
-7. For Power Users
+8. For Power Users
    - Windows and some UI's can become unstable if threads are set too high, use at your own risk
    - setoption name RelaxThreadLimit value N (set yourself as a power user)
    - setoption name LoadNNUE value (save and load NNUE files)
    - setoption name SaveNNUE value 
+9. Bench and test positions
+   - "bench" will run a ERET 1 second per move test (default)
+   - "bench benchmark-2.epd depth 10 nodes 1000000 time 2000 verbosity 0" will run a test on the named testsuite using the given parameters
+   - test suites are to be found in the chess-data folder. Modify as you wish, 6-part FEN, algebraic best move (bm)
+10. Diagnostics
+   - "mem" generates memory diagnostics
+   - "cpu" gives CPU perfomance information
 
 ## Contributing
 
