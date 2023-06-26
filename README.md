@@ -50,7 +50,7 @@ Chess-System-Tal-NNUE-2 is a UCI chess engine written in C++ by Chris Whittingto
    - test suites are to be found in the chess-data folder. Modify as you wish, 6-part FEN, algebraic best move (bm)
 10. Diagnostics
    - "mem" generates memory diagnostics
-   - "cpu" gives CPU perfomance information
+   - "cpu" gives CPU performance information
 
 ## Contributing
 
