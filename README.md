@@ -14,9 +14,29 @@ Chess-System-Tal-NNUE-2 is a UCI chess engine written in C++ by Chris Whittingto
 - Top five ranking (probably) among currently publicly available chess engines
 
 ## Requirements
-- AVX2 compatible PC
+- AVX2 (at least) compatible PC
+- if your PC is AVX512 compatible, use the avx512 executable
+- if your PC is AVX2 compatible, use the avx2 executable
 - User Interface (UI) software such as CuteChess, Banksia, or Arena
 - NB Arena has a bug which causes it to misidentify our engine. You need to tell Arena UI that CSTal is a UCI engine.
+
+## There are two version of CSTal (check the executable naming)
+- one is optimised for Elo (strength) 
+- the other for Tal-like play (EAS) - see Stephan Pohl website for fuller details
+- we made an EAS ranking chart for available engines in our strength pool using the Pohl EAS tool
+- you can find the sacrifice game PGNs in the release folder
+  
+Rank  EAS-Score  sacs   shorts  draws  moves  Engine/player 
+-------------------------------------------------------------------
+   1    132588  15.14%  24.35%  15.92%   79   Chess-System-Tal-2.00  
+   2    112915  14.08%  26.48%  18.22%   81   Stockfish_12  
+   3    111800  13.24%  27.40%  20.89%   76   CST-1.35-V20-E520  
+   4     88968  10.32%  23.02%  22.99%   78   SlowChess_2.9  
+   5     65431  07.56%  23.11%  31.42%   78   Seer-2.6  
+   6     57806  05.96%  19.15%  27.36%   83   Koivisto_8.0  
+   7     54841  07.69%  17.39%  25.15%   87   Berserk_9  
+   8     46756  05.60%  16.22%  27.39%   84   Koivisto_9.0  
+   9     41915  09.19%  15.14%  29.03%   86   Berserk_10  
 
 ## Usage
 
