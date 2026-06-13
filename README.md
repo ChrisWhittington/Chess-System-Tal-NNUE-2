@@ -10,7 +10,7 @@ Chess-System-Tal-NNUE-2 is a UCI chess engine written in C++ by Chris Whittingto
 - `CSTal-2.02-E1019-AVX512.zip` — faster on CPUs with AVX-512 (recent AMD Zen4+/Intel); will **not** run without AVX-512 — use the AVX2 build if unsure.
 
 ### Fixes since 2.01
-- UCI eval king-bucket / `BuildPinData`
+- cores and threads issue resolved
 - EPD-load buffer overflow
 
 ## Features
