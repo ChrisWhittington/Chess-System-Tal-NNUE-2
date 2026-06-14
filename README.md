@@ -2,24 +2,31 @@
 
 Chess-System-Tal-NNUE-2 is a UCI chess engine written in C++ by Chris Whittington and Ed Schröder.
 
-## Latest release — 2.03
+## Latest release — 2.04
 
-**Chess System Tal 2.03** is a bug-fixed release. Two self-contained Windows x64 builds (NNUE E1019 net embedded — just run the `.exe`):
+Self-contained Windows x64 builds — the NNUE net is embedded, so just unzip and run the `.exe`. Two playing styles, each in AVX2 and AVX-512. Use **AVX2** if unsure; the AVX-512 build is faster but needs a recent AVX-512 CPU (AMD Zen4+ / Intel). The badges below are the download buttons and show live download counts.
 
-- `CSTal-2.03-E1019-AVX2.zip` — works on all modern x64 CPUs (AVX2).
-- `CSTal-2.03-E1019-AVX512.zip` — faster on CPUs with AVX-512 (recent AMD Zen4+/Intel); will **not** run without AVX-512 — use the AVX2 build if unsure.
+**Elo build (net E1019)** — strongest play:
 
-### New in 2.03
-- fixes a rare crash (access violation) where an illegal king move — the king stepping backwards along a sliding checker's ray, or an undetected discovered check — could slip through legality checking, let the opponent "capture" the king, and corrupt the internal board. This affected **both** the AVX2 and AVX-512 builds (it was not AVX-512-specific). No change to playing strength or settings.
-- with thanks to **Peter Marfan** for the crash report and the test position that pinned down the bug (from a study by O. Pervakov & A. Stavrietsky):
+[![Download E1019 AVX2](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.04/CSTal-2.04-E1019-AVX2.zip?style=for-the-badge&label=E1019%20AVX2&color=2ea44f)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.04/CSTal-2.04-E1019-AVX2.zip)
+[![Download E1019 AVX-512](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.04/CSTal-2.04-E1019-AVX512.zip?style=for-the-badge&label=E1019%20AVX-512&color=2ea44f)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.04/CSTal-2.04-E1019-AVX512.zip)
+
+**Tal-style / EAS build (net E1162)** — sacrificial, attacking play (Stefan Pohl EAS metric):
+
+[![Download E1162-EAS AVX2](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.04/CSTal-2.04-E1162-EAS-AVX2.zip?style=for-the-badge&label=E1162-EAS%20AVX2&color=8957e5)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.04/CSTal-2.04-E1162-EAS-AVX2.zip)
+[![Download E1162-EAS AVX-512](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.04/CSTal-2.04-E1162-EAS-AVX512.zip?style=for-the-badge&label=E1162-EAS%20AVX-512&color=8957e5)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.04/CSTal-2.04-E1162-EAS-AVX512.zip)
+
+### New in 2.04
+- Tal-style **EAS** build (net E1162) now offered alongside the Elo build (net E1019).
+- Fixes a rare crash (access violation) where an illegal king move — the king stepping backwards along a sliding checker's ray, or an undetected discovered check — could slip through legality checking, let the opponent "capture" the king, and corrupt the internal board. Affected **both** AVX2 and AVX-512. Thanks to **Peter Marfan** for the report and the test position (from a study by O. Pervakov & A. Stavrietsky):
 
   ```
   4k2r/3Rp1p1/1Kp1P3/Pp1P2b1/4R3/P4P2/1p4q1/1Q5r w k - 0 1
   ```
+- Release builds hardened (debug assertions stripped).
 
-### Fixes in 2.02
-- cores and threads issue resolved
-- EPD-load buffer overflow
+### Earlier fixes (2.02–2.03)
+- cores and threads handling; EPD-load buffer overflow; UCI eval king-bucket / BuildPinData.
 
 ## Features
 
