@@ -17,10 +17,25 @@ Self-contained Windows x64 builds — the NNUE net is embedded, so just unzip an
 [![Download E1162-EAS AVX-512](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.05/CSTal-2.05-E1162-EAS-AVX512.zip?style=for-the-badge&label=E1162-EAS%20AVX-512&color=8957e5)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.05/CSTal-2.05-E1162-EAS-AVX512.zip)
 
 ### New in 2.05
-- Fixes a crash (access violation) on **short FENs** — a 4-field position with no halfmove/fullmove counters (e.g. `... w - -`), as sent by some GUIs/tools — which made the FEN parser read past the end of its token list. 5-field FENs were also affected. Standard 6-field FENs are unaffected.
+- Fixes a crash (access violation) on **short FENs** — a 4-field position with no halfmove/fullmove counters (e.g. `... w - -`), as sent by some GUIs/tools — which made the FEN parser read past the end of its token list. 5-field FENs were also affected. Standard 6-field FENs are unaffected. (Reported by **Steve Maughan**.)
 
 ### Earlier fixes (2.02–2.04)
-- Illegal king-move / king-capture crash (thanks **Peter Marfan** for the report + test position); release builds hardened (debug assertions stripped); Tal-style **EAS** build (net E1162) added alongside the Elo build (E1019); UCI eval king-bucket / BuildPinData; EPD-load buffer overflow; cores/threads handling.
+- Illegal king-move / king-capture crash; release builds hardened (debug assertions stripped); Tal-style **EAS** build (net E1162) added alongside the Elo build (E1019); UCI eval king-bucket / BuildPinData; EPD-load buffer overflow; cores/threads handling.
+
+## Acknowledgements
+
+With thanks for the crash reports and the exact test positions that pinned them down:
+
+- **Steve Maughan** — the short-FEN crash fixed in 2.05:
+
+  ```
+  5n2/B3K3/2p2Np1/4k3/7P/3bN1P1/2Prn1P1/1q6 w - -
+  ```
+- **Peter Marfan** — the illegal king-move / king-capture crash fixed in 2.04, from a study by O. Pervakov & A. Stavrietsky:
+
+  ```
+  4k2r/3Rp1p1/1Kp1P3/Pp1P2b1/4R3/P4P2/1p4q1/1Q5r w k - 0 1
+  ```
 
 ## Features
 
