@@ -2,24 +2,31 @@
 
 Chess-System-Tal-NNUE-2 is a UCI chess engine written in C++ by Chris Whittington and Ed Schröder.
 
-## Latest release — 2.06
+## Latest release — 2.07
 
 Self-contained Windows x64 builds — the NNUE net is embedded, so just unzip and run the `.exe`. Two playing styles, each in AVX2 and AVX-512. Use **AVX2** if unsure; the AVX-512 build is faster but needs a recent AVX-512 CPU (AMD Zen4+ / Intel). The badges below are the download buttons and show live download counts.
 
 **Elo build (net E1019)** — strongest play:
 
-[![Download E1019 AVX2](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.06/CSTal-2.06-E1019-AVX2.zip?cacheSeconds=7200&style=for-the-badge&label=E1019%20AVX2&color=2ea44f)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.06/CSTal-2.06-E1019-AVX2.zip)
-[![Download E1019 AVX-512](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.06/CSTal-2.06-E1019-AVX512.zip?cacheSeconds=7200&style=for-the-badge&label=E1019%20AVX-512&color=2ea44f)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.06/CSTal-2.06-E1019-AVX512.zip)
+[![Download E1019 AVX2](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.07/CSTal-2.07-E1019-AVX2.zip?cacheSeconds=7200&style=for-the-badge&label=E1019%20AVX2&color=2ea44f)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.07/CSTal-2.07-E1019-AVX2.zip)
+[![Download E1019 AVX-512](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.07/CSTal-2.07-E1019-AVX512.zip?cacheSeconds=7200&style=for-the-badge&label=E1019%20AVX-512&color=2ea44f)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.07/CSTal-2.07-E1019-AVX512.zip)
 
 **Tal-style / EAS build (net E1162)** — sacrificial, attacking play (Stefan Pohl EAS metric):
 
-[![Download E1162-EAS AVX2](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.06/CSTal-2.06-E1162-EAS-AVX2.zip?cacheSeconds=7200&style=for-the-badge&label=E1162-EAS%20AVX2&color=8957e5)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.06/CSTal-2.06-E1162-EAS-AVX2.zip)
-[![Download E1162-EAS AVX-512](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.06/CSTal-2.06-E1162-EAS-AVX512.zip?cacheSeconds=7200&style=for-the-badge&label=E1162-EAS%20AVX-512&color=8957e5)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.06/CSTal-2.06-E1162-EAS-AVX512.zip)
+[![Download E1162-EAS AVX2](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.07/CSTal-2.07-E1162-EAS-AVX2.zip?cacheSeconds=7200&style=for-the-badge&label=E1162-EAS%20AVX2&color=8957e5)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.07/CSTal-2.07-E1162-EAS-AVX2.zip)
+[![Download E1162-EAS AVX-512](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.07/CSTal-2.07-E1162-EAS-AVX512.zip?cacheSeconds=7200&style=for-the-badge&label=E1162-EAS%20AVX-512&color=8957e5)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.07/CSTal-2.07-E1162-EAS-AVX512.zip)
 
-**Experimental nets** — *for wild, sacrificial and crazy play* (AVX2 only): **EP36-ABSURD** (wild, materially-reckless play) and **EP417-EXTREME** (purposeful and determined play). These builds sacrifice strength for a great style of play.
+**Experimental nets** — *for wild, sacrificial and crazy play* (now in AVX2 and AVX-512): **ABSURD** (wild, materially-reckless play) and **EXTREME** (purposeful and determined play). These builds sacrifice strength for a great style of play.
 
-[![Download EP36-ABSURD AVX2](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.06/CSTal-2.06-EP36-ABSURD-AVX2.zip?cacheSeconds=7200&style=for-the-badge&label=EP36-ABSURD%20AVX2&color=e36209)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.06/CSTal-2.06-EP36-ABSURD-AVX2.zip)
-[![Download EP417-EXTREME AVX2](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.06/CSTal-2.06-EP417-EXTREME-AVX2.zip?cacheSeconds=7200&style=for-the-badge&label=EP417-EXTREME%20AVX2&color=e36209)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.06/CSTal-2.06-EP417-EXTREME-AVX2.zip)
+[![Download ABSURD AVX2](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.07/CSTal-2.07-cst-absurd-AVX2.zip?cacheSeconds=7200&style=for-the-badge&label=ABSURD%20AVX2&color=e36209)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.07/CSTal-2.07-cst-absurd-AVX2.zip)
+[![Download ABSURD AVX-512](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.07/CSTal-2.07-cst-absurd-AVX512.zip?cacheSeconds=7200&style=for-the-badge&label=ABSURD%20AVX-512&color=e36209)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.07/CSTal-2.07-cst-absurd-AVX512.zip)
+[![Download EXTREME AVX2](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.07/CSTal-2.07-cst-extreme-AVX2.zip?cacheSeconds=7200&style=for-the-badge&label=EXTREME%20AVX2&color=e36209)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.07/CSTal-2.07-cst-extreme-AVX2.zip)
+[![Download EXTREME AVX-512](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.07/CSTal-2.07-cst-extreme-AVX512.zip?cacheSeconds=7200&style=for-the-badge&label=EXTREME%20AVX-512&color=e36209)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.07/CSTal-2.07-cst-extreme-AVX512.zip)
+
+### New in 2.07
+- The **Extreme** and **Absurd** builds now ship in both **AVX2 and AVX-512** (previously AVX2 only).
+- **Fixed a per-`go` memory leak** in single-threaded search: an orphaned timer thread leaked roughly one thread stack per search (~40 KB/search), reclaimed only at process exit. Long single-thread analysis and batch runs no longer grow unbounded.
+- **Lighter default footprint for high-concurrency use:** default Hash reduced 256 MB → 32 MB, the Threads option is clamped to the machine's logical-processor count (no oversubscription), and the Hash floor now matches the advertised 16 MB minimum. Match managers / GUIs that set Hash and Threads explicitly are unaffected.
 
 ### New in 2.06
 - Each download now **announces its own name and net** over UCI — `Chess System Tal 2.06 E1019` for the Elo build and `Chess System Tal 2.06 E1162-EAS` for the Tal-style build. Previously both reported only `Chess System Tal 2.05`, so GUIs like **ChessBase** saw two identically-named engines and you had to rename one by hand. **Upgrading from 2.05 in ChessBase/Fritz:** remove the old 2.05 engine entry before adding 2.06, then the two builds install cleanly as separate engines. (Reported by **Peter Berger**.)
