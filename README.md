@@ -4,7 +4,7 @@ Chess-System-Tal-NNUE-2 is a UCI chess engine written in C++ by Chris Whittingto
 
 ## Latest release — 2.07
 
-Self-contained Windows x64 builds — the NNUE net is embedded, so just unzip and run the `.exe`. Two playing styles, each in AVX2 and AVX-512. Use **AVX2** if unsure; the AVX-512 build is faster but needs a recent AVX-512 CPU (AMD Zen4+ / Intel). The badges below are the download buttons and show live download counts.
+Self-contained Windows x64 builds — the NNUE net is embedded, so just unzip and run the `.exe`. Two playing styles, each in AVX2 and AVX-512, plus a **scalar** build for older PCs that runs on any x86-64 CPU. Use **AVX2** if unsure; the AVX-512 build is faster but needs a recent AVX-512 CPU (AMD Zen4+ / Intel); pick **scalar** only if neither AVX build will start on your machine. The badges below are the download buttons and show live download counts.
 
 **Elo build (net E1019)** — strongest play:
 
@@ -23,7 +23,15 @@ Self-contained Windows x64 builds — the NNUE net is embedded, so just unzip an
 [![Download EXTREME AVX2](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.07/CSTal-2.07-cst-extreme-AVX2.zip?cacheSeconds=7200&style=for-the-badge&label=EXTREME%20AVX2&color=e36209)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.07/CSTal-2.07-cst-extreme-AVX2.zip)
 [![Download EXTREME AVX-512](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.07/CSTal-2.07-cst-extreme-AVX512.zip?cacheSeconds=7200&style=for-the-badge&label=EXTREME%20AVX-512&color=e36209)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.07/CSTal-2.07-cst-extreme-AVX512.zip)
 
+**Older or non-AVX2 PC?** These **scalar** builds run on **any x86-64 CPU** — no AVX required. They play *identically* to the AVX2 builds (same moves, same evaluation), just slower (roughly 4–5×). Only use these if an AVX2 build won't start on your machine. One per net:
+
+[![Download E1019 scalar](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.07/CSTal-2.07-E1019-scalar.zip?cacheSeconds=7200&style=for-the-badge&label=E1019%20scalar&color=6e7781)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.07/CSTal-2.07-E1019-scalar.zip)
+[![Download E1162-EAS scalar](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.07/CSTal-2.07-E1162-EAS-scalar.zip?cacheSeconds=7200&style=for-the-badge&label=E1162-EAS%20scalar&color=6e7781)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.07/CSTal-2.07-E1162-EAS-scalar.zip)
+[![Download ABSURD scalar](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.07/CSTal-2.07-cst-absurd-scalar.zip?cacheSeconds=7200&style=for-the-badge&label=ABSURD%20scalar&color=6e7781)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.07/CSTal-2.07-cst-absurd-scalar.zip)
+[![Download EXTREME scalar](https://img.shields.io/github/downloads/ChrisWhittington/Chess-System-Tal-NNUE-2/v2.07/CSTal-2.07-cst-extreme-scalar.zip?cacheSeconds=7200&style=for-the-badge&label=EXTREME%20scalar&color=6e7781)](https://github.com/ChrisWhittington/Chess-System-Tal-NNUE-2/releases/download/v2.07/CSTal-2.07-cst-extreme-scalar.zip)
+
 ### New in 2.07
+- New **scalar (no-AVX) builds** for every net — they run on **any x86-64 CPU**, for older PCs without AVX2. Verified bit-identical play to the AVX2 builds (same moves and evaluation), just slower.
 - The **Extreme** and **Absurd** builds now ship in both **AVX2 and AVX-512** (previously AVX2 only).
 - **Fixed a per-`go` memory leak** in single-threaded search: an orphaned timer thread leaked roughly one thread stack per search (~40 KB/search), reclaimed only at process exit. Long single-thread analysis and batch runs no longer grow unbounded.
 - **Lighter default footprint for high-concurrency use:** default Hash reduced 256 MB → 32 MB, the Threads option is clamped to the machine's logical-processor count (no oversubscription), and the Hash floor now matches the advertised 16 MB minimum. Match managers / GUIs that set Hash and Threads explicitly are unaffected.
@@ -63,9 +71,10 @@ With thanks for the bug reports and the exact test cases that pinned them down:
 - Top five ranking (probably) among currently publicly available chess engines
 
 ## Requirements
-- AVX2 (at least) compatible PC
-- if your PC is AVX512 compatible, use the avx512 executable
+- Any x86-64 PC — the **scalar** executable runs everywhere, even without AVX2
+- if your PC is AVX512 compatible, use the avx512 executable (fastest)
 - if your PC is AVX2 compatible, use the avx2 executable
+- only fall back to the **scalar** executable if neither AVX build will start; it plays identically (same moves/eval) but is roughly 4–5× slower
 - User Interface (UI) software such as CuteChess, Banksia, or Arena
 - NB Arena has a bug which causes it to misidentify our engine. You need to tell Arena UI that CSTal is a UCI engine.
 
